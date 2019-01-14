@@ -16,10 +16,10 @@ const Post = props => {
 
 Post.propTypes = {
     post: PropTypes.shape({
-        username: PropTypes.string,
-        likes: PropTypes.number,
-        imageUrl: PropTypes.string,
-        thumbnailUrl: PropTypes.string,
+        username: PropTypes.string.isRequired,
+        likes: PropTypes.number.isRequired,
+        imageUrl: PropTypes.string.isRequired,
+        thumbnailUrl: PropTypes.string.isRequired,
         timestamp: PropTypes.string
     })
 }
