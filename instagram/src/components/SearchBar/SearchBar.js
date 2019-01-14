@@ -1,6 +1,5 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { fab } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import {
   faCompass,
@@ -14,17 +13,20 @@ const SearchBar = () => {
   return (
     <div className="search-bar">
       <div className="search-logo-container">
-      <FontAwesomeIcon icon={faInstagram} />
-      <img className="ig-logo" alt="Instagram logo" src={Logo} />
+        <div className="ig-icon-container">
+          <FontAwesomeIcon icon={faInstagram} size="3x" />
+        </div>
+
+        <img className="ig-logo" alt="Instagram logo" src={Logo} />
       </div>
 
       <div className="search-input-container" placeholder="Search">
         <input type="text" />
       </div>
       <div className="search-icons-container">
-        <FontAwesomeIcon icon={faCompass} />
-        <FontAwesomeIcon icon={faHeart} />
-        <FontAwesomeIcon icon={faUser} />
+        <FontAwesomeIcon size="2x" icon={faCompass} />
+        <FontAwesomeIcon size="2x" icon={faHeart} />
+        <FontAwesomeIcon size="2x" icon={faUser} />
       </div>
     </div>
   );

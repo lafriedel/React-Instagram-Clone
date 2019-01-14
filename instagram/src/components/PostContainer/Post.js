@@ -16,8 +16,8 @@ const Post = props => {
       </div>
       <div className="social-activation">
         <div className="social-activation-icons">
-          <FontAwesomeIcon icon={faHeart} />
-          <FontAwesomeIcon icon={faComment} />
+          <FontAwesomeIcon size="2x" icon={faHeart} />
+          <FontAwesomeIcon size="2x" icon={faComment} />
         </div>
 
         <p>{props.post.likes} likes</p>
