@@ -1,9 +1,8 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 const Post = props => {
   return (
-    <div>
-      {console.log(props)}
       <div>
         <img src={props.post.thumbnailUrl} />
         <span>{props.post.username}</span>
@@ -12,8 +11,17 @@ const Post = props => {
         </div>
         <p>{props.post.likes} likes</p>
       </div>
-    </div>
   );
 };
+
+Post.propTypes = {
+    post: PropTypes.shape({
+        username: PropTypes.string,
+        likes: PropTypes.number,
+        imageUrl: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        timestamp: PropTypes.string
+    })
+}
 
 export default Post;
