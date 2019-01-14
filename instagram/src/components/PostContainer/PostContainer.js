@@ -2,7 +2,9 @@ import React from 'react';
 
 const PostContainer = props => {
     return (
-        <div>Inside post container</div>
+        <div>
+            {props.post.username}
+        </div>
     )
 }
 
