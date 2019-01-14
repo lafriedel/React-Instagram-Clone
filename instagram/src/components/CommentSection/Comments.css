@@ -1,0 +1,12 @@
+.comments-section {
+    padding: 0 15px 15px;
+}
+
+.comment {
+    margin-bottom: 5px;
+}
+
+.username-of-comment {
+    font-weight: 800;
+    margin-right: 5px;
+}
