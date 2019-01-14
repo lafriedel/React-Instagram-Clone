@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 const Comment = props => {
     return (
         <div>
-            {console.log(props)}
             {props.comment.username}
             {props.comment.text}
         </div>
