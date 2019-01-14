@@ -1,7 +1,37 @@
 .search-bar {
     width: 100%;
     display: flex;
-    border: 1px solid red;
+    border-bottom: 1px solid lightgrey;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+
+.search-logo-container {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    justify-content: space-evenly;
+}
+
+.search-input-container {
+
+    width: 200px;
+}
+
+.search-icons-container {
+    width: 150px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 5px;
+    background: whitesmoke;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
 }
 
 .ig-logo {
