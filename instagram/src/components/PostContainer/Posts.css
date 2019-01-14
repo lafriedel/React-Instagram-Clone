@@ -1,0 +1,25 @@
+.post-container {
+border: 1px solid lightgrey;
+    width: 643px;
+    margin-bottom: 50px;
+}
+
+.post {
+    width: 50%;
+}
+
+.post-header {
+display: flex;
+align-items: center;
+}
+
+.user-icon {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+}
+
+.social-activation {
+    padding: 0 10px;
+}
