@@ -1,0 +1,10 @@
+.search-bar {
+    width: 100%;
+    display: flex;
+    border: 1px solid red;
+}
+
+.ig-logo {
+    width: 100px;
+    height: 40px;
+}
