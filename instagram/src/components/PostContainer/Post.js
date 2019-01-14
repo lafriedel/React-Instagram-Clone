@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart, faComment } from "@fortawesome/free-regular-svg-icons";
 
 const Post = props => {
   return (
@@ -14,9 +15,13 @@ const Post = props => {
         <img src={props.post.imageUrl} />
       </div>
       <div className="social-activation">
-      <p>{props.post.likes} likes</p>
-      </div>
+        <div className="social-activation-icons">
+          <FontAwesomeIcon icon={faHeart} />
+          <FontAwesomeIcon icon={faComment} />
+        </div>
 
+        <p>{props.post.likes} likes</p>
+      </div>
     </div>
   );
 };
