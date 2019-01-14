@@ -2,8 +2,21 @@
     padding: 0 15px 15px;
 }
 
+.add-comment {
+    margin: 0 15px;
+    padding: 15px 0;
+    border-top: 1px solid lightgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-comment p {
+    color: grey;
+}
+
 .comment {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .username-of-comment {

@@ -7,12 +7,12 @@ const Post = props => {
   return (
     <div className="post">
       <div className="post-header">
-        <img className="user-icon" src={props.post.thumbnailUrl} />
+        <img className="user-icon" alt="User icon" src={props.post.thumbnailUrl} />
         <span>{props.post.username}</span>
       </div>
 
       <div className="post-img">
-        <img src={props.post.imageUrl} />
+        <img alt="User's post" src={props.post.imageUrl} />
       </div>
       <div className="social-activation">
         <div className="social-activation-icons">
