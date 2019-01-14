@@ -1,9 +1,10 @@
 .post-container {
-border: 1px solid lightgrey;
-border-radius: 5px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
     width: 642px;
     margin: 0 auto;
     margin-bottom: 50px;
+    background: white;
     
 }
 
@@ -13,9 +14,9 @@ border-radius: 5px;
 }
 
 .post-header {
-display: flex;
-align-items: center;
-padding: 15px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
 }
 
 .user-icon {
