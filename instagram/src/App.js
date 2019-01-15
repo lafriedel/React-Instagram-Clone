@@ -17,9 +17,7 @@ class App extends Component {
       <SearchBar />
         {this.state.dummyData.map(post => {
           return (
-          <div>
             <PostContainer post={post} key={1 + Math.random()} />
-          </div>
           );
         })}
       </div>
