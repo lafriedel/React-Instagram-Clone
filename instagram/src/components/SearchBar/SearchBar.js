@@ -20,8 +20,8 @@ const SearchBar = () => {
         <img className="ig-logo" alt="Instagram logo" src={Logo} />
       </div>
 
-      <div className="search-input-container" placeholder="Search">
-        <input type="text" />
+      <div className="search-input-container" >
+        <input type="text" placeholder="Search" />
       </div>
       <div className="search-icons-container">
         <FontAwesomeIcon size="2x" icon={faCompass} />
