@@ -29,7 +29,8 @@ class CommentSection extends React.Component {
           text: this.state.commentText,
           username: "lafriedel"
         }
-      ]
+      ],
+      commentText: ""
     })
   }
 
