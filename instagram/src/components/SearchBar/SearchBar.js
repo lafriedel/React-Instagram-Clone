@@ -9,7 +9,9 @@ import {
 import "./SearchBar.css";
 
 import Logo from "../../img/instagram-logo.png";
-const SearchBar = () => {
+
+
+const SearchBar = props => {
   return (
     <div className="search-bar">
       <div className="search-logo-container">
@@ -21,8 +23,11 @@ const SearchBar = () => {
       </div>
 
       <div className="search-input-container" >
-        <input type="text" placeholder="Search" />
+        <form onSubmit={props.handleSearch}>
+          <input type="text" placeholder="Search" name="searchTerm" onChange={props.handleChange}/>
+        </form>
       </div>
+
       <div className="search-icons-container">
         <FontAwesomeIcon size="2x" icon={faCompass} />
         <FontAwesomeIcon size="2x" icon={faHeart} />
