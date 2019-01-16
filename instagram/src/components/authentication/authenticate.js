@@ -35,7 +35,8 @@ const authenticate = PostsPage => Login =>
 
             username = JSON.parse(username);
             this.setState({
-                username: username
+                username: username,
+                loggedIn: true
             })
         }
     }
@@ -46,7 +47,6 @@ const authenticate = PostsPage => Login =>
         })
 
         localStorage.setItem("username", JSON.stringify(this.state.username));
-        localStorage.setItem("loggedIn", JSON.stringify(this.state.loggedIn));
     };
 
     handleChange = event => {
@@ -56,7 +56,6 @@ const authenticate = PostsPage => Login =>
       };
     
     
-
     render() {
       if (this.state.loggedIn) {
         return <PostsPage username={this.state.username} />;

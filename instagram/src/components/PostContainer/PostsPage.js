@@ -5,12 +5,13 @@ import PostContainer from "./PostContainer";
 import PropTypes from "prop-types";
 
 class PostsPage extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       dummyData: [],
       searchedData: [],
-      searchTerm: ""
+      searchTerm: "",
+      username: props.username
     };
   }
 
