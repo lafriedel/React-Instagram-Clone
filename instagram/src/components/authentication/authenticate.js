@@ -1,6 +1,6 @@
-import React from 'react';
-import PostsPage from './../PostContainer/PostsPage';
-import Login from '../Login/Login';
+import React from "react";
+import PostsPage from "./../PostContainer/PostsPage";
+import Login from "../Login/Login";
 
 // const authenticate = PostsPage => Login => props =>
 //     class extends React.Component {
@@ -16,24 +16,53 @@ import Login from '../Login/Login';
 // export default authenticate;
 
 const authenticate = PostsPage => Login =>
-    class extends React.Component {
-        constructor() {
-            super();
-            this.state = {
-                loggedIn: false
-            }
-        }
+  class extends React.Component {
+    constructor() {
+      super();
+      this.state = {
+        username: "",
+        loggedIn: false
+      };
+    }
 
-        componentDidMount() {
+    componentDidMount() {
+        this.loadLocalStorage();
+    }
 
-        }
+    loadLocalStorage = () => {
+        if (localStorage.hasOwnProperty("username")) {
+            let username = localStorage.getItem("username");
 
-        render() {
-            if (this.state.loggedIn) {
-                return <PostsPage />;
-            }
-            return <Login />;
+            username = JSON.parse(username);
+            this.setState({
+                username: username
+            })
         }
     }
+
+    login = () => {
+        this.setState({
+            loggedIn: true
+        })
+
+        localStorage.setItem("username", JSON.stringify(this.state.username));
+        localStorage.setItem("loggedIn", JSON.stringify(this.state.loggedIn));
+    };
+
+    handleChange = event => {
+        this.setState({
+          [event.target.name]: event.target.value
+        });
+      };
+    
+    
+
+    render() {
+      if (this.state.loggedIn) {
+        return <PostsPage username={this.state.username} />;
+      }
+      return <Login login={this.login} handleChange={this.handleChange} />;
+    }
+  };
 
 export default authenticate(PostsPage)(Login);
