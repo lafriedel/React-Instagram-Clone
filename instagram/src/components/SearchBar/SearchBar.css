@@ -32,12 +32,26 @@
     justify-content: space-evenly;
 }
 
-input[type=text] {
+.search-input-container input[type=text] {
     width: 100%;
     padding: 5px;
     background: whitesmoke;
     border: 1px solid lightgrey;
-    border-radius: 5px;
+    border-radius: 2px;
+    font-size: 0.8rem;
+}
+
+.search-input-container input[type=text]::placeholder {
+    text-align: center;
+}
+
+.search-input-container input[type=text]:focus {
+    outline: none;
+    background: white;
+}
+
+.search-input-container input[type=text]:focus::placeholder {
+    text-align: left;
 }
 
 .ig-logo {
