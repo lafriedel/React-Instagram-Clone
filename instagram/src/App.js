@@ -22,11 +22,14 @@ class App extends Component {
 
   handleSearch = event => {
     event.preventDefault();
-    this.setState({
-      searchedData: this.state.dummyData.filter(post => {
-        return post.username.toLowerCase() === this.state.searchTerm.toLowerCase();
+   
+      this.setState({
+        dummyData: this.state.dummyData.filter(post => {
+          return post.username.toLowerCase() === this.state.searchTerm.toLowerCase();
+        })
       })
-    })
+    
+
   };
 
   handleChange = event => {
@@ -37,7 +40,7 @@ class App extends Component {
 
   
   render() {
-    if (this.state.searchedData.length === 0) {
+    
       return (
         <div className="App">
         <SearchBar
@@ -53,22 +56,7 @@ class App extends Component {
           })}
         </div>
       );
-    }
-    return (
-      <div className="App">
-      <SearchBar
-        dummyData={this.state.dummyData}
-        handleSearch={this.handleSearch}
-        handleChange={this.handleChange}
-        searchTerm={this.state.searchTerm}
-      />
-        {this.state.searchedData.map(post => {
-          return (
-            <PostContainer post={post} key={1 + Math.random()} />
-          );
-        })}
-      </div>
-    );
+
 
   }
 }
