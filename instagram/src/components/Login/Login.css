@@ -30,6 +30,10 @@
 .login-form input[type=text] {
     padding: 10px;
     margin-bottom: 10px;
+    background: whitesmoke;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    width: 100%;
 }
 
 .login-form input[type=text]:focus {
