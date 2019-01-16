@@ -1,7 +1,7 @@
 import React from "react";
-import dummyData from '../../dummy-data';
-import SearchBar from '../SearchBar/SearchBar';
-import PostContainer from './PostContainer';
+import dummyData from "../../dummy-data";
+import SearchBar from "../SearchBar/SearchBar";
+import PostContainer from "./PostContainer";
 import PropTypes from "prop-types";
 
 class PostsPage extends React.Component {
@@ -23,10 +23,19 @@ class PostsPage extends React.Component {
   handleSearch = event => {
     event.preventDefault();
 
+    if (this.state.searchTerm === "") {
+      this.setState({
+        dummyData: dummyData
+      });
+    }
     this.setState({
       dummyData: this.state.dummyData.filter(post => {
+
+        let username = post.username.toLowerCase();
+        let search = this.state.searchTerm.toLowerCase();
+
         return (
-          post.username.toLowerCase() === this.state.searchTerm.toLowerCase()
+          username.includes(search)
         );
       })
     });
@@ -36,28 +45,23 @@ class PostsPage extends React.Component {
     this.setState({
       [event.target.name]: event.target.value
     });
-  }
+  };
 
   render() {
-    
     return (
       <div className="App">
-      <SearchBar
-        dummyData={this.state.dummyData}
-        handleSearch={this.handleSearch}
-        handleChange={this.handleChange}
-        searchTerm={this.state.searchTerm}
-      />
+        <SearchBar
+          dummyData={this.state.dummyData}
+          handleSearch={this.handleSearch}
+          handleChange={this.handleChange}
+          searchTerm={this.state.searchTerm}
+        />
         {this.state.dummyData.map(post => {
-          return (
-            <PostContainer post={post} key={1 + Math.random()} />
-          );
+          return <PostContainer post={post} key={1 + Math.random()} />;
         })}
       </div>
     );
-
-
-}
+  }
 }
 
 export default PostsPage;
