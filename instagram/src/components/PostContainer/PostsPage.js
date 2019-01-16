@@ -31,13 +31,10 @@ class PostsPage extends React.Component {
     }
     this.setState({
       dummyData: this.state.dummyData.filter(post => {
-
         let username = post.username.toLowerCase();
         let search = this.state.searchTerm.toLowerCase();
 
-        return (
-          username.includes(search)
-        );
+        return username.includes(search);
       })
     });
   };
@@ -58,7 +55,7 @@ class PostsPage extends React.Component {
           searchTerm={this.state.searchTerm}
         />
         {this.state.dummyData.map(post => {
-          return <PostContainer post={post} key={1 + Math.random()} />;
+          return <PostContainer username={this.state.username} post={post} key={1 + Math.random()} />;
         })}
       </div>
     );
