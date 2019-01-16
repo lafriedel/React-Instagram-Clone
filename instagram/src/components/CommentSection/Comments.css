@@ -16,6 +16,17 @@
     color: grey;
 }
 
+.add-comment input[type=text] {
+    background: white;
+    font-size: 0.8rem;
+    width: 590px;
+    border: none;
+}
+
+.add-comment input[type=text]:focus {
+    outline: none;
+}
+
 .comment {
     margin-bottom: 8px;
 }
