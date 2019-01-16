@@ -1,22 +1,11 @@
 import React, { Component } from 'react';
-
+// import PostsPage from './components/PostContainer/PostsPage;
+// import Login from './components/Login/Login;
 import authenticate from './components/authentication/authenticate';
 
 import './App.css';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-  
-    }
-  }
-
-  componentDidMount() {
-
-  }
-
-
   render() {
       return (
         <div className="App">
@@ -27,5 +16,6 @@ class App extends Component {
 }
 
 const DisplayedComponent = authenticate;
+// const DisplayedComponent = authenticate(PostsPage)(Login);
 
 export default App;
