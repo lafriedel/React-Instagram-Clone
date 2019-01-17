@@ -9,7 +9,6 @@ class PostsPage extends React.Component {
     super(props);
     this.state = {
       dummyData: [],
-      searchedData: [],
       searchTerm: "",
       username: props.username
     };
@@ -49,7 +48,6 @@ class PostsPage extends React.Component {
     return (
       <div className="App">
         <SearchBar
-          dummyData={this.state.dummyData}
           handleSearch={this.handleSearch}
           handleChange={this.handleChange}
           searchTerm={this.state.searchTerm}
