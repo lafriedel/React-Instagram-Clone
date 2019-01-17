@@ -4,6 +4,7 @@ import AppStore from '../../img/apple-app-store.png';
 import GooglePlay from '../../img/google-play-store.png';
 // import "./Login.css";
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const LoginPage = styled.div`
   display: flex;
@@ -94,5 +95,10 @@ const Login = props => {
     </LoginPage>
   );
 };
+
+Login.propTypes = {
+  login: PropTypes.func,
+  handleChange: PropTypes.func
+}
 
 export default Login;
