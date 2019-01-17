@@ -21,7 +21,8 @@ const PostContainer = props => {
             <CommentSection 
                 username={props.username} 
                 comments={props.post.comments}
-                timestamp={props.post.timestamp} />
+                timestamp={props.post.timestamp}
+                usernameOfPoster={props.post.username} />
         </StyledPostContainer>
     )
 }

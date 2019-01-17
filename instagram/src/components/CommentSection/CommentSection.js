@@ -54,9 +54,21 @@ class CommentSection extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({
-      comments: this.props.comments
-    })
+
+    if (localStorage.hasOwnProperty("comments on " + this.props.usernameOfPoster)) {
+      let commentsFromStorage = localStorage.getItem("comments on " + this.props.usernameOfPoster);
+
+      commentsFromStorage = JSON.parse(commentsFromStorage);
+      console.log(commentsFromStorage);
+      this.setState({
+        comments: commentsFromStorage
+      })
+    } else {
+      this.setState({
+        comments: this.props.comments
+      })
+    }
+
   }
 
   addNewComment = event => {
@@ -76,7 +88,7 @@ class CommentSection extends React.Component {
   }
 
   addNewCommentToStorage = () => {
-    localStorage.setItem("comments", JSON.stringify(this.state.comments))
+    localStorage.setItem("comments on " + this.props.usernameOfPoster, JSON.stringify(this.state.comments))
   }
 
   handleChange = event => {
@@ -88,7 +100,6 @@ class CommentSection extends React.Component {
   render() {
     
     let timestamp = this.props.timestamp;
-    console.log(timestamp);
     return (
       <div>
         <CommentsContainer>

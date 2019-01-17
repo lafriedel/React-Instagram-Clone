@@ -56,7 +56,7 @@ class PostsPage extends React.Component {
         {this.state.dummyData.map(post => {
           return (<PostContainer 
                     username={this.state.username} 
-                    post={post} 
+                    post={post}
                     key={1 + Math.random()} 
           />);
         })}

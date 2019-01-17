@@ -51,7 +51,6 @@ class Post extends React.Component {
   }
 
   likePost() {
-    console.log(this.state.userLiked);
     this.state.userLiked === false ?
       this.setState(prevState => ({
         likes: ++prevState.likes,
@@ -64,7 +63,6 @@ class Post extends React.Component {
   }
 
   render() {
-    console.log(this.state.likes);
     return (
       <StyledPost>
         <PostHeader>
