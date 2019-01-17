@@ -1,12 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const CommentContainer = styled.div`
+    margin-bottom: 8px;
+
+    span {
+        font-weight: 800;
+        margin-right: 5px;
+    }
+`;
 
 const Comment = props => {
     return (
-        <div className="comment">
+        <CommentContainer>
 
-            <p><span className="username-of-comment">{props.comment.username}</span>{props.comment.text}</p>
-        </div>
+            <p><span>{props.comment.username}</span>{props.comment.text}</p>
+        </CommentContainer>
     )
 }
 

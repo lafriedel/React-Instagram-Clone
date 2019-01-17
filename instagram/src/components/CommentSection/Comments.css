@@ -1,4 +1,4 @@
-.comments-section {
+/* .comments-section {
     padding: 0 15px 15px;
     background: white;
 }
@@ -25,8 +25,8 @@
 
 .add-comment input[type=text]:focus {
     outline: none;
-}
-
+} */
+/* 
 .comment {
     margin-bottom: 8px;
 }
@@ -34,4 +34,4 @@
 .username-of-comment {
     font-weight: 800;
     margin-right: 5px;
-}
+} */

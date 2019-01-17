@@ -2,8 +2,39 @@ import React from "react";
 import Comment from "./Comment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
-import "./Comments.css";
+// import "./Comments.css";
+import styled from 'styled-components';
 import PropTypes from "prop-types";
+
+const CommentsContainer = styled.div`
+  padding: 0 15px 15px;
+  background: white;
+`;
+
+const AddCommentContainer = styled.div`
+  margin: 0 15px;
+  padding: 15px 0;
+  border-top: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    color: grey;
+  }
+
+  input[type=text] {
+    background: white;
+    font-size: 0.8rem;
+    width: 590px;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+`;
+
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -50,12 +81,12 @@ class CommentSection extends React.Component {
     
     return (
       <div>
-        <div className="comments-section">
+        <CommentsContainer>
           {this.state.comments.map(comment => {
             return <Comment comment={comment} key={1 + Math.random()} />;
           })}
-        </div>
-        <div className="add-comment">
+        </CommentsContainer>
+        <AddCommentContainer>
           <form onSubmit={this.addNewComment}>
             <input 
               name="commentText" 
@@ -66,7 +97,7 @@ class CommentSection extends React.Component {
             />
           </form>
           <FontAwesomeIcon size="xl" icon={faEllipsisH} />
-        </div>
+        </AddCommentContainer>
       </div>
     );
   }
