@@ -1,4 +1,4 @@
-.login-page {
+/* .login-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,14 +16,14 @@
     align-items: center;
     padding: 15px 15px 30px;
     margin-bottom: 25px;
-}
+} */
 
-.login-ig-logo {
+/* .login-ig-logo {
     width: 180px;
     margin-bottom: 10px;
-}
+} */
 
-.login-form {
+/* .login-form {
     width: 90%;
 }
 
@@ -52,13 +52,13 @@
     border-radius: 5px;
     margin-top: 10px;
     cursor: pointer;
-}
+} */
 
-.app-buttons-container {
+/* .app-buttons-container {
     margin-top: 25px;
 }
 
 .app-buttons-container img {
     width: 130px;
     margin: 0 4px;
-}
+} */
