@@ -105,6 +105,7 @@ class CommentSection extends React.Component {
 };
 
 CommentSection.propTypes = {
+  username: PropTypes.string,
   comments: PropTypes.arrayOf(PropTypes.object)
 };
 
