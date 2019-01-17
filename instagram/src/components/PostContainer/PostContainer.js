@@ -25,6 +25,7 @@ const PostContainer = props => {
 
 PostContainer.propTypes = {
     post: PropTypes.object.isRequired,
+    username: PropTypes.string
 }
 
 export default PostContainer;

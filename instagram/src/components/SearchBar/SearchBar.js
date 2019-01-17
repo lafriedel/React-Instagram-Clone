@@ -88,8 +88,8 @@ const SearchBar = props => {
 };
 
 SearchBar.propTypes = {
-  handleSearch: PropTypes.func,
-  handleChange: PropTypes.func,
+  handleSearch: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
   searchTerm: PropTypes.string
 }
 
