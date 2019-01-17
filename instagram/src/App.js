@@ -3,14 +3,21 @@ import React, { Component } from 'react';
 // import Login from './components/Login/Login;
 import authenticate from './components/authentication/authenticate';
 
-import './App.css';
+import styled from 'styled-components';
+// import './App.css';
+
+
+const AppDiv = styled.div`
+  margin: 0 auto;
+`;
+
 
 class App extends Component {
   render() {
       return (
-        <div className="App">
-        <DisplayedComponent />
-        </div>
+        <AppDiv >
+          <DisplayedComponent />
+        </AppDiv>
       );
   }
 }

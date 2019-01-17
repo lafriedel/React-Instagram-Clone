@@ -31,7 +31,13 @@ class CommentSection extends React.Component {
         }
       ],
       commentText: ""
-    })
+    }, this.addNewCommentToStorage)
+
+    // localStorage.setItem("comments", JSON.stringify(this.state.comments))
+  }
+
+  addNewCommentToStorage = () => {
+    localStorage.setItem("comments", JSON.stringify(this.state.comments))
   }
 
   handleChange = event => {
