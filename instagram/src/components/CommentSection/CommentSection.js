@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import PropTypes from "prop-types";
 
 const CommentsContainer = styled.div`
-  padding: 0 15px 15px;
+  padding: 0 15px 10px;
   background: white;
 `;
 
@@ -35,6 +35,14 @@ const AddCommentContainer = styled.div`
   }
 `;
 
+const TimeStamp = styled.p`
+  font-size: 0.6rem;
+  color: lightgrey;
+  text-transform: uppercase;
+  margin-top: 15px;
+`;
+
+const moment = require('moment');
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -79,12 +87,15 @@ class CommentSection extends React.Component {
 
   render() {
     
+    let timestamp = this.props.timestamp;
+    console.log(timestamp);
     return (
       <div>
         <CommentsContainer>
           {this.state.comments.map(comment => {
             return <Comment comment={comment} key={1 + Math.random()} />;
           })}
+          <TimeStamp>{moment(timestamp, "MMMM Do YYYY, hh:mm:ss a").fromNow()}</TimeStamp>
         </CommentsContainer>
         <AddCommentContainer>
           <form onSubmit={this.addNewComment}>

@@ -1,7 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import {
   faCompass,
   faHeart,
@@ -29,14 +28,6 @@ const LogoContainer = styled.div`
   align-items: center;
   width: 200px;
   justify-content: space-evenly;
-
-  .magnify {
-    position: relative;
-    top: 19px;
-    left: 48px;
-    color: grey;
-    
-  }
 
   input[type=text] {
     width: 100%;
@@ -83,11 +74,7 @@ const SearchBar = props => {
 
       <LogoContainer>
         <form onSubmit={props.handleSearch}>
-          <div>
-            <FontAwesomeIcon className="magnify" icon={faSearch} size="1x" />
-            <input type="text" placeholder="Search" name="searchTerm" onChange={props.handleChange}/>
-          </div>
-
+          <input type="text" placeholder="Search" name="searchTerm" onChange={props.handleChange}/>
         </form>
       </LogoContainer>
 

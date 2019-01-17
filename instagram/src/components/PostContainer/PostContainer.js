@@ -18,7 +18,10 @@ const PostContainer = props => {
     return (
         <StyledPostContainer>
             <Post post={props.post} />
-            <CommentSection username={props.username} comments={props.post.comments} />
+            <CommentSection 
+                username={props.username} 
+                comments={props.post.comments}
+                timestamp={props.post.timestamp} />
         </StyledPostContainer>
     )
 }
