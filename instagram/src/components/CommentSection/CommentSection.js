@@ -96,7 +96,7 @@ class CommentSection extends React.Component {
               onChange={this.handleChange}
             />
           </form>
-          <FontAwesomeIcon size="xl" icon={faEllipsisH} />
+          <FontAwesomeIcon size="2x" icon={faEllipsisH} />
         </AddCommentContainer>
       </div>
     );

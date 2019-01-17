@@ -60,4 +60,8 @@ class PostsPage extends React.Component {
   }
 }
 
+PostsPage.propTypes = {
+  username: PropTypes.string
+}
+
 export default PostsPage;

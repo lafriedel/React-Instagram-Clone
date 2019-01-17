@@ -74,7 +74,7 @@ const Login = props => {
   return (
     <LoginPage>
       <LoginContainer>
-        <img className="login-ig-logo" src={Logo} />
+        <img className="login-ig-logo" alt="Instagram script logo" src={Logo} />
         <LoginForm onSubmit={props.login}>
           <input
             type="text"
@@ -88,8 +88,8 @@ const Login = props => {
       </LoginContainer>
       <p>Get the app.</p>
       <GetApps>
-        <img src={AppStore} />
-        <img src={GooglePlay} />
+        <img alt="Apple App Store button" src={AppStore} />
+        <img alt="Google Play button" src={GooglePlay} />
       </GetApps>
     </LoginPage>
   );
