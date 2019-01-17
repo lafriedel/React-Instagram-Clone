@@ -7,6 +7,7 @@ import {
   faUser
 } from "@fortawesome/free-regular-svg-icons";
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import "./SearchBar.css";
 
 import Logo from "../../img/instagram-logo.png";
@@ -85,5 +86,11 @@ const SearchBar = props => {
     </SearchContainer>
   );
 };
+
+SearchBar.propTypes = {
+  handleSearch: PropTypes.func,
+  handleChange: PropTypes.func,
+  searchTerm: PropTypes.string
+}
 
 export default SearchBar;
