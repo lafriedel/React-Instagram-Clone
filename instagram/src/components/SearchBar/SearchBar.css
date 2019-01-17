@@ -1,4 +1,4 @@
-.search-bar {
+/* .search-bar {
     width: 100%;
     display: flex;
     border-bottom: 1px solid lightgrey;
@@ -7,32 +7,33 @@
     margin-bottom: 50px;
     padding: 10px;
     background: white;
-}
+} */
 
-.search-logo-container {
+/* .search-logo-container {
     display: flex;
     align-items: center;
     width: 200px;
     justify-content: space-evenly;
-}
+} */
 
-.ig-icon-container {
+/* .ig-icon-container {
     padding-right: 20px;
     border-right: 1px solid grey;
-}
+} */
 
-.search-input-container {
+/* .search-input-container {
 
     width: 200px;
-}
+} */
 
-.search-icons-container {
+/* .search-icons-container {
     width: 150px;
     display: flex;
     justify-content: space-evenly;
-}
+    align-items: center;
+} */
 
-.search-input-container input[type=text] {
+/* .search-logo-container input[type=text] {
     width: 100%;
     padding: 5px;
     background: whitesmoke;
@@ -52,7 +53,7 @@
 
 .search-input-container input[type=text]:focus::placeholder {
     text-align: left;
-}
+} */
 
 .ig-logo {
     width: 100px;
