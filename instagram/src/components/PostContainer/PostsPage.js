@@ -46,7 +46,7 @@ class PostsPage extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <SearchBar
           handleSearch={this.handleSearch}
           handleChange={this.handleChange}
