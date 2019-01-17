@@ -26,16 +26,17 @@ class PostsPage extends React.Component {
     if (this.state.searchTerm === "") {
       this.setState({
         dummyData: dummyData
+      })
+    } else {
+      this.setState({
+        dummyData: this.state.dummyData.filter(post => {
+          let username = post.username.toLowerCase();
+          let search = this.state.searchTerm.toLowerCase();
+  
+          return username.includes(search);
+        })
       });
     }
-    this.setState({
-      dummyData: this.state.dummyData.filter(post => {
-        let username = post.username.toLowerCase();
-        let search = this.state.searchTerm.toLowerCase();
-
-        return username.includes(search);
-      })
-    });
   };
 
   handleChange = event => {
@@ -53,7 +54,11 @@ class PostsPage extends React.Component {
           searchTerm={this.state.searchTerm}
         />
         {this.state.dummyData.map(post => {
-          return <PostContainer username={this.state.username} post={post} key={1 + Math.random()} />;
+          return (<PostContainer 
+                    username={this.state.username} 
+                    post={post} 
+                    key={1 + Math.random()} 
+          />);
         })}
       </div>
     );
